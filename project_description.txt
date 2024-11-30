@@ -1,0 +1,47 @@
+Идея программы:
+Приложение для отслеживания здоровья, которое:
+
+1. Позволяет пользователям отслеживать вес, активность, уровень воды, калории и другие метрики.
+2. Предоставляет рекомендации по питанию и упражнениям.
+3. Содержит разные роли сотрудников, таких как диетологи, тренеры и администраторы, которые помогают в настройке индивидуальных планов.
+4. Использует Spring Framework для управления зависимостями и конфигурации.
+
+Основные классы:
+
+HealthApplication: Главный класс для запуска приложения.
+UserHealthTracker: Логика для отслеживания метрик здоровья пользователя.
+HealthCalculations: Утилиты для расчетов (калории, ИМТ, суточная норма воды и т.д.).
+Dietician и MealPlanner: Логика для составления планов питания.
+Trainer: Создание тренировочных программ.
+
+src
+└── health
+    ├── app
+    │   ├── code
+    │   │   ├── HealthApplication
+    │   │   ├── ApplicationWithSpring
+    │   │   └── UserHealthTracker
+    │   ├── config
+    │   │   └── HealthAppConfig
+    │   └── utils
+    │       └── HealthCalculations
+    ├── staff
+    │   ├── administration
+    │   │   ├── Director
+    │   │   ├── NutritionExpert
+    │   │   └── FitnessManager
+    │   ├── specialists
+    │   │   ├── nutrition
+    │   │   │   ├── Dietician
+    │   │   │   └── MealPlanner
+    │   │   └── fitness
+    │   │       ├── Trainer
+    │   │       └── Physiotherapist
+    ├── services
+    │   ├── HealthServices
+    │   ├── NutritionServices
+    │   └── FitnessServices
+    └── models
+        ├── User
+        ├── MealPlan
+        └── WorkoutPlan
